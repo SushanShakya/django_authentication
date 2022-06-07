@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+   <h1>Login Here</h1> 
+   <h3>World War 3 gonna start but you can still login :P</h3>
+
+   <form action="/auth/login" method="post">
+       {% csrf_token %}
+       <label for="">What was your email ?</label>
+       <input type="email" id="user_email" name="email" Required>
+       <br>
+       <br>
+
+       <label for="">For security tell us your code</label>
+       <input type="password" id="password" name="password" Required>
+       <br>
+       <br>
+
+       <button type="submit">Find me</button>
+
+   </form>
+</body>
+</html>

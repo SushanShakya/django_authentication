@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Site</title>
+</head>
+<body>
+
+    {% for message in messages %}
+    <h6>Message : {{message}}</h6>
+    {% endfor %}
+
+    {% if user.is_authenticated %}
+        <h1>WTF a visitor?? We haven't had a visitor in ages !</h1>
+        <h3>Bonjor Master {{ uname }}</h3>
+        <button type="submit"><a href="logout">Logout</a></button>
+    {% else %} 
+        <h1>The World is Very Small</h1>
+        <h3>Anyways you can login to continue</h3>
+        <button type="submit"><a href="login">Login</a></button>
+        <button type="submit"><a href="register">Register</a></button>
+    {% endif %} 
+
+</body>
+</html>

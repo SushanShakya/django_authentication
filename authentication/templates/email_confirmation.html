@@ -1,0 +1,15 @@
+{% autoescape off %}
+
+Ahoy Mate !!
+
+From This Day forward we are officially recognizing
+you as one of our own. 
+
+There is one last test you need to pass first !
+The Test is this mail.
+
+Click the following link to activate your account !
+
+https://{{domain}}{% url 'activation' uidb64=uid token=token %}
+
+{% endautoescape %}
